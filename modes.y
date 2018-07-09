@@ -20,7 +20,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifdef ANDROID
+#include <linux/fb.h>
+#else
 #include "fb.h"
+#endif
+
 #include "fbset.h"
 
 extern int yylex(void);

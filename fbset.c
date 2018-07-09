@@ -32,7 +32,11 @@
 struct file;
 struct inode;
 
+#ifdef ANDROID
+#include <linux/fb.h>
+#else
 #include "fb.h"
+#endif
 
 #include "fbset.h"
 
